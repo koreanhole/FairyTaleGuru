@@ -23,7 +23,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.koreanhole.pluto.fairytaleguru.FairyTaleGuruTopAppBar
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.NavigableScreen
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.LocalNavigationController
 

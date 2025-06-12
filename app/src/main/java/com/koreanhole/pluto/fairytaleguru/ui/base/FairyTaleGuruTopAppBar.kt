@@ -1,6 +1,7 @@
-package com.koreanhole.pluto.fairytaleguru
+package com.koreanhole.pluto.fairytaleguru.ui.base
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,7 +22,7 @@ fun FairyTaleGuruTopAppBar(
     modifier: Modifier = Modifier,
     title: @Composable () -> Unit = {},
     navigationIcon: @Composable () -> Unit = {},
-    actions: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit = {},
+    actions: @Composable RowScope.() -> Unit = {},
     scrollBehavior: TopAppBarScrollBehavior? = null
 ) {
     // 현재 테마 스타일과 다크 모드 여부를 가져옵니다.

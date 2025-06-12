@@ -14,7 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.koreanhole.pluto.fairytaleguru.FairyTaleGuruTopAppBar
+import com.koreanhole.pluto.fairytaleguru.ui.base.FairyTaleGuruTopAppBar
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.LocalNavigationController
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.NavigableScreen
 
