@@ -9,4 +9,7 @@ sealed class NavigableScreen {
 
     @Serializable
     data object CreateFairyTaleScreen: NavigableScreen()
+
+    @Serializable
+    data object PlayFairyTaleScreen: NavigableScreen()
 }

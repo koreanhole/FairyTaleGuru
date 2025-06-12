@@ -19,7 +19,6 @@ import com.koreanhole.pluto.fairytaleguru.ui.navigation.LocalNavigationControlle
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.text.font.FontWeight
-import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.NavigableScreen
 import com.koreanhole.pluto.fairytaleguru.viewmodel.CreateFairyTaleViewModel
@@ -34,7 +33,7 @@ fun CreateFairyTaleScreen(
     LaunchedEffect(Unit) {
         viewModel.createFairyTale(
             onFinished = {
-                navigationController.navigate(NavigableScreen.HomeScreen)
+                navigationController.navigate(NavigableScreen.PlayFairyTaleScreen)
             }
         )
     }
