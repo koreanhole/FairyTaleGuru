@@ -18,8 +18,8 @@ import com.koreanhole.pluto.fairytaleguru.ui.theme.ThemeStyle
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FairyTaleGuruTopAppBar(
-    title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    title: @Composable () -> Unit = {},
     navigationIcon: @Composable () -> Unit = {},
     actions: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit = {},
     scrollBehavior: TopAppBarScrollBehavior? = null

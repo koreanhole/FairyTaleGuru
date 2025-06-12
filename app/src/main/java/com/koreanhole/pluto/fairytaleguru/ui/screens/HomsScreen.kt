@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.koreanhole.pluto.fairytaleguru.FairyTaleGuruTopAppBar
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.NavigableScreen
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.LocalNavigationController
 
@@ -42,7 +43,7 @@ fun HomeScreen() {
         ) {
             Text(
                 "동화를 생성해보세요.",
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.headlineLarge,
                 color = MaterialTheme.colorScheme.onBackground,
                 fontWeight = FontWeight.Bold
             )
