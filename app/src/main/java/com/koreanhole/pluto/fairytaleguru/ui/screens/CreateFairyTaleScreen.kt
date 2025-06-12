@@ -17,12 +17,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.koreanhole.pluto.fairytaleguru.ui.navigation.LocalNavigationController
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.text.font.FontWeight
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.koreanhole.pluto.fairytaleguru.ui.navigation.NavigableScreen
+import com.koreanhole.pluto.fairytaleguru.viewmodel.CreateFairyTaleViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CreateFairyTaleScreen() {
+fun CreateFairyTaleScreen(
+    viewModel: CreateFairyTaleViewModel = viewModel()
+) {
     val navigationController = LocalNavigationController.current
+    val lifecycleOwner = LocalLifecycleOwner.current
+
+    LaunchedEffect(lifecycleOwner) {
+        viewModel.createFairyTale(
+            onFinished = {
+                navigationController.navigate(NavigableScreen.HomeScreen)
+            }
+        )
+    }
 
     Scaffold { innerPadding -> // Scaffold가 제공하는 contentPadding
         Column(
