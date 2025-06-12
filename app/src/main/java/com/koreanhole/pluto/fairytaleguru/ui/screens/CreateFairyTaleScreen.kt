@@ -30,9 +30,8 @@ fun CreateFairyTaleScreen(
     viewModel: CreateFairyTaleViewModel = viewModel()
 ) {
     val navigationController = LocalNavigationController.current
-    val lifecycleOwner = LocalLifecycleOwner.current
 
-    LaunchedEffect(lifecycleOwner) {
+    LaunchedEffect(Unit) {
         viewModel.createFairyTale(
             onFinished = {
                 navigationController.navigate(NavigableScreen.HomeScreen)
