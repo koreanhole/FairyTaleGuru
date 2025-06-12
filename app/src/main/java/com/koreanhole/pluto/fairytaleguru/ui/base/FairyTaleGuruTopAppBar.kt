@@ -2,6 +2,8 @@ package com.koreanhole.pluto.fairytaleguru.ui.base
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,8 +22,8 @@ import com.koreanhole.pluto.fairytaleguru.ui.theme.ThemeStyle
 @Composable
 fun FairyTaleGuruTopAppBar(
     modifier: Modifier = Modifier,
-    title: @Composable () -> Unit = {},
-    navigationIcon: @Composable () -> Unit = {},
+    titleLabel: String? = null,
+    onBackButtonClick: (() -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
     scrollBehavior: TopAppBarScrollBehavior? = null
 ) {
@@ -46,10 +48,25 @@ fun FairyTaleGuruTopAppBar(
         actionIconContentColor = colorScheme.onSurface
     )
 
-    TopAppBar(
-        title = title,
+    CenterAlignedTopAppBar(
+        title = {
+            if (titleLabel == null) Unit else Text(titleLabel)
+        },
         modifier = modifier,
-        navigationIcon = navigationIcon,
+        navigationIcon = {
+            if (onBackButtonClick == null) {
+                Unit
+            } else {
+                IconButton(
+                    onClick = onBackButtonClick,
+                ) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack, // AutoMirrored 아이콘 사용
+                        contentDescription = "뒤로 가기"
+                    )
+                }
+            }
+        },
         actions = actions,
         colors = topAppBarColors, // 이 일관된 스타일을 적용
         scrollBehavior = scrollBehavior
