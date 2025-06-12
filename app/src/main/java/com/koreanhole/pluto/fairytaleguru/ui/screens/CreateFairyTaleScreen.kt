@@ -42,7 +42,8 @@ fun CreateFairyTaleScreen() {
             CircularProgressIndicator(
                 modifier = Modifier
                     .size(56.dp), //CircularProgressIndicator 주변에 약간의 여백을 줍니다.
-                color = MaterialTheme.colorScheme.primary //선택적으로 색상을 지정할 수 있습니다.
+                color = MaterialTheme.colorScheme.primary, //선택적으로 색상을 지정할 수 있습니다.
+                strokeWidth = 6.dp
             )
         }
     }
